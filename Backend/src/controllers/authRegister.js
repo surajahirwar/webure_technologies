@@ -6,7 +6,7 @@ const jwt = require('jsonwebtoken')
 const {validationResult} = require("express-validator")
 
 const generateToken = (user) =>{
-    return  jwt.sign({ user },"webure_technologies")
+    return  jwt.sign({ name:user.name,email:user.email },"webure_technologies")
 }
 
 
