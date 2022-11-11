@@ -24,8 +24,10 @@ export default function Dashboard() {
     }
         dispatch(authenticate(token))
     
+           if(token){
             const user = jwtDecode(token);
             setnewdata(user)
+           }
     
   },[])
 
